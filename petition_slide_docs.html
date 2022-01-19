@@ -64,8 +64,30 @@
     .align-left {
       text-align: left !important;
     }
-     
-  </style>
+  </style>  
+<link type="text/css" rel="stylesheet" href="src/css/lightslider.css" />   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="src/js/lightslider.js"></script> 
+<script>
+     $(document).ready(function() {
+        $("#content-slider").lightSlider({
+            loop:true,
+            keyPress:true
+        });
+        $('#image-gallery').lightSlider({
+            gallery:true,
+            item:1,
+            thumbItem:9,
+            slideMargin: 0,
+            speed:500,
+            auto:true,
+            loop:true,
+            onSliderLoad: function() {
+                $('#image-gallery').removeClass('cS-hidden');
+            }  
+        });
+    });
+</script>
 </head>
 
 <body>
@@ -193,132 +215,103 @@
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">        
-        <div class="row">
-          <div class="col-12">
-            <div class="card-body align-center">
-              <div>
-                <h5>
-                  <u>BEFORE THE ISLAMABAD HIGH COURT, ISLAMABAD</u>
-
-                </h5>
-                <p>
-                  Writ Petition No. <u>1812</u> /2021
-                </p>
-                <h6>KAMRAN KHAN AND OTHERS</h6>
-                <h6>VERSUS</h6>
-                <h6>CDA AND OTHERS</h6>
-                <h6 class="align-left">
-                  WRIT PETITION UNDER ARTICLE 199 OF THE CONSTITUTION OF THE ISLAMIC REPUBLIC OF PAKISTAN, 1973
-                </h6><BR>
-                <h6><u>INDEX</u></h6>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="container" data-aos="fade-up">   
+        
         <div class="row gy-4">
+            
           <div class="col-12">
             <div class="card">
               <div class="card-body">
                 <div class="d-flex align-items-start">
-                  <table class="table table-bordered">
-                    <tbody>
-                      <thead>
-                        <th>Sr. #</th>
-                        <th>Description of Documents</th>
-                        <th>Date</th>
-                        <th>Annexure</th>
-                        <th>Page</th>
-                      </thead>
-                      <tr>
-                        <td>1</td>
-                        <td><a href="petition_slide_docs.html">Writ Petition along with Affidavit</a></td>
-                        <td></td>
-                        <td></td>
-                        <td>1-15</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td><a href="petition_slide_docs_a.html">Copy of Impugned Turmintion Order</a></td>
-                        <td>02.12.2021</td>
-                        <td>A</td>                        
-                        <td>16-17</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td><a href="petition_slide_docs_b.html">Copy of Contract of the Petitioner</a></td>
-                        <td>04.05.2021</td>
-                        <td>B</td>
-                        <td>18-19</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td><a href="petition_slide_docs_c.html">Copy of the Additional Charge Notification</a></td>
-                        <td>20.09.2021</td>
-                        <td>C</td>
-                        <td>20-22</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td><a href="petition_slide_docs_d.html">Copy of the Complaint Submitted to the Ombudsman</a></td>
-                        <td>01.11.2021</td>
-                        <td>D</td>
-                        <td>23-42</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td><a href="#">Copy of the Petitioner Urgent Email to the Respodent</a></td>
-                        <td>30.11.2021</td>
-                        <td>E</td>
-                        <td>43</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td><a href="#">Copy of the Civil Suit Seeking Pre-termination hearing</a></td>
-                        <td>01.12.2021</td>
-                        <td>F</td>
-                        <td>44-50</td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td><a href="#">Copy of the Stay Order passed by ADJ</a></td>
-                        <td>2.12.2021</td>
-                        <td>G</td>
-                        <td>51</td>
-                      </tr>
+                    <div class="col-3">
 
-                      <tr>
-                        <td>9</td>
-                        <td><a href="#">Application for Exemption of Certified Copies Along With Affidavit</a></td>
-                        <td></td>
-                        <td>H</td>
-                        <td>52-53</td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td><a href="#">Application for Intirem Relief Along with Affidavit</a></td>
-                        <td></td>
-                        <td></td>
-                        <td>54-55</td>
-                      </tr>
-                      <tr>
-                        <td>11</td>
-                        <td><a href="#">Power of Attorney</a></td>
-                        <td></td>
-                        <td></td>
-                        <td>56-57</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    
+                  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <button class="nav-link active" onclick="document.location='petition_slide_docs.html'" id="v-pills-home-tab" data-bs-toggle="pill"
+                      data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                      aria-selected="true">Petition</button>
+                      <button class="nav-link" onclick="document.location='petition_slide_docs_a.html'" id="v-pills-profile-tab" data-bs-toggle="pill"
+                      data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                      aria-selected="false">A</button>
+                      <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                      data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                      aria-selected="false">B</button>
+                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                      data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                      aria-selected="false">C</button>
+                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                      data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                      aria-selected="false">D</button>
+
+                    <button class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+                      type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">E</button>
+                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                      data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                      aria-selected="false">F</button>
+                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                      data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                      aria-selected="false">G</button>
+                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                      data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                      aria-selected="false">H</button>
+                  </div>
+                </div>
+                <div class="col-9">                 
+                     
+                                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                                    <li data-thumb="img/1/thumb/1.png"> 
+                                        <img src="img/1/1.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/2.png"> 
+                                        <img src="img/1/2.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/3.png"> 
+                                        <img src="img/1/3.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/4.png"> 
+                                        <img src="img/1/4.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/5.png"> 
+                                        <img src="img/1/5.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/6.png"> 
+                                        <img src="img/1/6.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/7.png"> 
+                                        <img src="img/1/7.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/8.png"> 
+                                        <img src="img/1/8.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/9.png"> 
+                                        <img src="img/1/9.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/10.png"> 
+                                        <img src="img/1/10.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/11.png"> 
+                                        <img src="img/1/11.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/12.png"> 
+                                        <img src="img/1/12.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/13.png"> 
+                                        <img src="img/1/13.png" />
+                                         </li>
+                                    <li data-thumb="img/1/thumb/14.png"> 
+                                        <img src="img/1/14.png" />
+                                         </li>
+                                    
+                                </ul>
+                             
+                </div>
 
                 </div>
               </div>
             </div>
-
-
           </div>
         </div>
-
       </div>
     </section><!-- End Services Section -->
 
@@ -366,7 +359,6 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
